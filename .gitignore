@@ -1,13 +1,11 @@
-# Data (large / competition files — keep out of git, but preserve folder structure)
-data/raw/*
-data/interim/*
-data/processed/*
-!data/raw/.gitkeep
-!data/interim/.gitkeep
-!data/processed/.gitkeep
-*.csv
-*.parquet
-*.feather
+# Data (competition files — keep out of git, but preserve folder structure)
+# Everything under data/ is ignored except the .gitkeep placeholders.
+data/**
+!data/
+!data/**/
+!data/**/.gitkeep
+
+# NOTE: outputs/ is intentionally NOT ignored — charts (PNG/HTML) are committed.
 
 # Python
 __pycache__/
